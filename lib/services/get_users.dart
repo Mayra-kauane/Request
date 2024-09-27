@@ -11,3 +11,10 @@ getUsers() async {
     throw e;
   }
 }
+class User {
+  String name;
+  User({required this.name});
+  factory User.fromJson(String, dynamic json) {
+    return User(name: json['firtsName']);
+  }
+}
