@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1000597045919",
+    "project_id": "chat-message-67482",
+    "storage_bucket": "chat-message-67482.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1000597045919:android:e685791b09f3d7f57d18aa",
+        "android_client_info": {
+          "package_name": "com.example.chatsenai"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC0QiqDO8KNgEg8hqgdzvPPSlCAEMcpbig"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
