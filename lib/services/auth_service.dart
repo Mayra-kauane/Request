@@ -8,7 +8,7 @@ class FirebaseAuthService {
     try{
     var user = await auth.signInWithEmailAndPassword(
       email: 'mayra_carvalho@estudante.sesisenai.org.br', 
-      password: '12345678');
+      password: 'Mayra1234');
       return user;
     }catch (e) {
       rethrow;
@@ -22,6 +22,11 @@ class FirebaseAuthService {
     }catch (e) {
       rethrow;
     }
+  }
+
+  checkUser() async {
+    var user = auth.currentUser!.displayName;
+    return user;
   }
 }
 

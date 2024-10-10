@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_5/components/custom_button.dart';
 import 'package:flutter_application_5/components/custom_input.dart';
 
 class RegisterPage extends StatelessWidget {
@@ -22,7 +23,7 @@ class RegisterPage extends StatelessWidget {
             CustomInput(labelText: 'E-mail'),
             CustomInput(labelText: 'Senha', obscure: true,),
             CustomInput(labelText: 'Repita sua senha', obscure: true,),
-            CustomInput(labelText: 'Cadastrar'),
+            CustomButton(titleButton: 'Cadastrar',),
           ],
         ),
       ),

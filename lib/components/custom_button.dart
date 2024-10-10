@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_5/services/auth_service.dart';
+import 'package:flutter_application_5/views/home_page.dart';
 
 class CustomButton extends StatelessWidget {
   
@@ -16,7 +17,8 @@ class CustomButton extends StatelessWidget {
         onPressed: () async {
           try{
             await FirebaseAuthService().login();
-            Navigator.pushReplacementNamed(context, '/');
+            // Navigator.pushReplacementNamed(context, '/');
+            Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => HomePage(),));
           } catch (e) {
             ScaffoldMessenger.of(context).showSnackBar(
               SnackBar(
