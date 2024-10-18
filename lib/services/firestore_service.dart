@@ -4,13 +4,21 @@ import 'package:flutter_application_5/services/auth_service.dart';
 class FirestoreService {
   var db = FirebaseFirestore.instance;
 
-  postFeedBack() async {
-    db.collection('FeedBacks').add({
+  postFeedback(message) async {
+    db.collection('Feedbacks').add({
       "user": await FirebaseAuthService().checkUser(),
-      "message":"Implementando Firebase",
+      "message": message,
       "photo":"",
       "create_at":DateTime.now(),
     });
+  }
 
+  getFeedback() async {
+    try {
+      var feedbacks = await db.collection('Feedbacks').orderBy('create_at', descending: true).get();
+      return(feedbacks.docs);
+    } catch (e) {
+      throw e;
+    }
   }
 }
